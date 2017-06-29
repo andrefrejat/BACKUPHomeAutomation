@@ -1,0 +1,39 @@
+config: null
+conversation: null
+discovery: null
+frontend: null
+history: null
+homeassistant:
+  customize:
+    switch.a020a61074a8_switch1:
+      friendly_name: New Node a020a61074a8 switch 1
+    switch.a020a61074a8_switch2:
+      friendly_name: New Node a020a61074a8 switch 2
+  elevation: 822
+  latitude: -23.5733
+  longitude: -46.6417
+  name: Home
+  time_zone: America/Sao_Paulo
+  unit_system: metric
+http: null
+introduction: null
+logbook: null
+mqtt:
+  broker: 192.168.1.35
+sensor:
+  platform: yr
+sun: null
+switch:
+- command_topic: /a020a61074a8/status/switch1
+  name: a020a61074a8_switch1
+  platform: mqtt
+  retain: 'true'
+  state_topic: /update/callback/a020a61074a8/switch1
+- command_topic: /a020a61074a8/status/switch2
+  name: a020a61074a8_switch2
+  platform: mqtt
+  retain: 'true'
+  state_topic: /update/callback/a020a61074a8/switch2
+tts:
+  platform: google
+updater: null

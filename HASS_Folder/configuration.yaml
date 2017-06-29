@@ -1,0 +1,89 @@
+config: null
+conversation: null
+discovery: null
+emulated_hue:
+  host_ip: 192.168.1.35
+  type: alexa
+frontend: null
+group:
+  Second Floor:
+    entities:
+    - group.office
+    view: true
+  media_players:
+    entities:
+    - media_player.deh_lindo
+    - media_player.chromecast_churrasqueira
+    name: Media players
+  office:
+    entities:
+    - switch.a020a61074a8_0
+    - switch.a020a61074a8_2
+    name: Office
+  testSwitches:
+    entities:
+    - switch.a020a600fe2f_0
+    - switch.a020a600fe2f_2
+    - switch.a020a600fe2f_3
+    name: Test Switches
+history: null
+homeassistant:
+  customize:
+    switch.a020a61074a8_0:
+      friendly_name: Office Middle Lights
+      emulated_hue_name: office middle lights
+    switch.a020a61074a8_2:
+      friendly_name: Office Computer Lights
+      emulated_hue_name: office computer lights
+    switch.a020a600fe2f_0:
+      friendly_name: NODE MCU test LED 0
+    switch.a020a600fe2f_2:
+      friendly_name: NODE MCU test LED 2
+    switch.a020a600fe2f_3:
+      friendly_name: NODE MCU test LED 3
+  elevation: 822
+  latitude: -23.615984
+  longitude: -46.678582
+  name: Home
+  time_zone: America/Sao_Paulo
+  unit_system: metric
+http: null
+introduction: null
+logbook: null
+mqtt:
+  broker: 192.168.1.35
+sun: null
+tts:
+  platform: google
+updater: null
+switch:
+  - platform: mqtt
+    name: a020a61074a8_0
+    command_topic: /a020a61074a8/status/0
+    state_topic: /update/callback/a020a61074a8/0
+    retain: true
+  - platform: mqtt
+    name: a020a61074a8_2
+    command_topic: /a020a61074a8/status/2
+    state_topic: /update/callback/a020a61074a8/2
+    retain: true
+  - platform: mqtt
+    name: a020a600fe2f_0
+    command_topic: /a020a600fe2f/status/0
+    state_topic: /update/callback/a020a600fe2f/0
+    retain: true
+  - platform: mqtt
+    name: a020a600fe2f_2
+    command_topic: /a020a600fe2f/status/2
+    state_topic: /update/callback/a020a600fe2f/2
+    retain: true
+  - platform: mqtt
+    name: a020a600fe2f_3
+    command_topic: /a020a600fe2f/status/3
+    state_topic: /update/callback/a020a600fe2f/3
+    retain: true
+camera:
+  - platform: rpi_camera
+    name: Server Camera RPi3
+    timelapse: 10
+    image_rotation: 180
